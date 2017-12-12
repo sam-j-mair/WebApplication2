@@ -1,0 +1,33 @@
+﻿@model WebApplication2.Controllers.CatsModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>getCats</title>
+</head>
+<body>
+    <div> 
+        <h1>Male</h1>
+        <ul>
+            @foreach (var cat in Model.male)
+            {
+                <li>@Html.DisplayFor(c => cat)</li>
+            }
+        </ul>
+        <h1>Female</h1>
+        <ul>
+            @foreach (var cat in Model.female)
+            {
+                
+                <li>@Html.DisplayFor(c => cat)</li>
+            }
+        </ul>
+    </div>
+</body>
+</html>
